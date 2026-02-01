@@ -483,9 +483,9 @@
             const questionsAnswered = userAnswers.length;
             const totalQuestionsToDisplay = questionsAnswered > 0 ? questionsAnswered : totalQuestions;
 
-            scoreText.textContent = `${score} / ${totalQuestionsToDisplay}`;
+            scoreText.textContent = `${score} / ${totalQuestionsToDisplay} (${((score / totalQuestionsToDisplay) * 100).toFixed(2)}%)`;
              if (questionsAnswered > 0 && questionsAnswered < totalQuestions) {
-                answeredQuestionsText.textContent = `von ${questionsAnswered} Fragen richtig beantwortet.`;
+                answeredQuestionsText.textContent = `Fragen richtig beantwortet.`;
             } else {
                 answeredQuestionsText.textContent = 'Fragen richtig beantwortet.';
             }
